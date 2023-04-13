@@ -39,7 +39,7 @@
 }
 
 .container {
-    width:60%;
+    width:50%;
     min-height: 300px;
     margin:200px auto 200px auto;
     border:2px solid black;
@@ -50,18 +50,19 @@
 
 
 .addContainer{
-  margin: 40px auto 40px auto;
+  margin: 40px ;
+  text-align: left;
 }
 
 
 
 .addContainer input {
-  width:70%;
+  width:45%;
+  min-width:100px;
   height: 30px;
   margin: 10px;
   padding: 10px;
-  border-radius: 10px;
-
+  border-radius: 10px;  
 }
 
 .addContainer button {
@@ -70,21 +71,24 @@
   border: none;
   padding: 5px;
   border-radius: 10px;
-  width: 100px;
+  width: 30%;
+ text-align: center;
   height: 50px;
+  min-width: 50px;
 }
+
+
 .addContainer button:hover {
  font-size: 20px;
 }
 
 .item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 10px;
   background-color: #f2f2f2;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px;
+  width: 80%;
 }
 
 .item span {
