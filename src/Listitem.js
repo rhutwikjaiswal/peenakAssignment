@@ -13,10 +13,12 @@ const Listitem = () => {
      const [olditems, setOldItems] = useState([]);
 
    const addItem=()=> {
-    if(name !== "" || surname !== "" || mobile !== "" || email !== "" ){
-      let contactInfo = "Full Name : " + name+ " "+surname+ " Mobile no : " + mobile + " Email-Id : " + email;
-      setOldItems([...olditems,contactInfo]);
-      console.log(olditems);
+    if(name !== "" && surname !== "" && mobile !== "" && email !== "" ){
+      var contactName = "Full Name : " + name+ " "+surname;  
+      var contactmobile = " Mobile no : " + mobile;
+      var contactemail =  " Email-Id : " + email;
+      setOldItems([...olditems,[contactName,contactmobile,contactemail]]);
+      //console.log(olditems);
     }else{
       alert("Please fill the required input!!!");
     }
@@ -25,7 +27,7 @@ const Listitem = () => {
 
   
     function removeItem(index) {
-      let confirmtext = window.confirm("Are You shure?");
+      let confirmtext = window.confirm("Are You sure?");
       if (confirmtext === true) {
         let newItems = [...olditems];
       newItems.splice(index, 1);
@@ -53,12 +55,13 @@ const Listitem = () => {
       </div>
 
       {olditems.map((item, index) => (
-      <div key={index} className="item">
-        <span>{item}</span>
-      <div>
-         <button onClick={() => removeItem(index)}>Remove</button>
-        </div> 
-      </div>
+      <ul key={index} className="item">
+        <li>{item[0]}</li>
+        <li>{item[1]}</li>
+        <li>{item[2]}</li>
+        <button onClick={() => removeItem(index)}>Remove</button>
+      </ul>   
+        
     ))}
        
   </div>
