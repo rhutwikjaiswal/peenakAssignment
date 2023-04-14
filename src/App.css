@@ -51,16 +51,16 @@
 
 .addContainer{
   margin: 40px ;
-  text-align: left;
+  text-align: center;
 }
 
 
 
 .addContainer input {
-  width:45%;
+  width:50%;
   min-width:100px;
   height: 30px;
-  margin: 10px;
+  margin: 25px;
   padding: 10px;
   border-radius: 10px;  
 }
@@ -69,13 +69,13 @@
   background-color: #4caf50;
   color: #fff;
   border: none;
-  padding: 5px;
-  border-radius: 10px;
-  width: 30%;
- text-align: center;
+  border-radius: 12px;
+  width: 85%;
+  text-align: center;
   height: 50px;
   min-width: 50px;
 }
+
 
 
 .addContainer button:hover {
@@ -87,8 +87,9 @@
   padding: 10px;
   background-color: #f2f2f2;
   border-radius: 10px;
-  margin: 20px;
-  width: 80%;
+  margin: 30px auto 30px auto;
+  width: 59%;
+  text-align: center;
 }
 
 .item span {
@@ -101,10 +102,13 @@
   background-color: #ff3333;
   color: #fff;
   border: none;
-  padding: 5px 10px;
+ 
   border-radius: 5px;
 }
 .item button:hover {
 font-size: 17px;
+}
+h1{
+  font-size: 50px;
 }
 
