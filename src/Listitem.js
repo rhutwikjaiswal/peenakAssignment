@@ -4,28 +4,29 @@ import './App.css';
 
 const Listitem = () => {
 
+
+    //CREATING STATE FOR STORING VALUES
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [mobile, setMobile] = useState("");
     const [email, setEmail] = useState("");
+    const [olditems, setOldItems] = useState([]);
 
-    
-     const [olditems, setOldItems] = useState([]);
 
+    //FOR ADDING VALUES 
    const addItem=()=> {
     if(name !== "" && surname !== "" && mobile !== "" && email !== "" ){
       var contactName = "Full Name : " + name+ " "+surname;  
       var contactmobile = " Mobile no : " + mobile;
       var contactemail =  " Email-Id : " + email;
       setOldItems([...olditems,[contactName,contactmobile,contactemail]]);
-      //console.log(olditems);
     }else{
       alert("Please fill the required input!!!");
     }
   
     }
 
-  
+    //FOR REMOVING VALUES
     function removeItem(index) {
       let confirmtext = window.confirm("Are You sure?");
       if (confirmtext === true) {
